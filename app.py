@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import requests
 import geopy.distance as ps
-
+from bs4 import BeautifulSoup
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,TemplateSendMessage,ImageSendMessage, StickerSendMessage, AudioSendMessage, FlexSendMessage
 )
@@ -214,6 +214,40 @@ def getdistace(latitude, longitude,cdat):
   cdat['km'] = kmsumList
   return cdat
 
+
+    
+def <CATEGORY OF PRONHUB1>(update, msg):
+    CATEGORYWEB="<CATEGORY OF PRONHUB1>"
+    #GET VIDEOS BY CATEGORY ORDER BY NEWEST
+    r = requests.get('https://es.pornhub.com/webmasters/search?search=' + CATEGORYWEB + '&ordering=newest')
+    rjson=r.json()
+    count=0
+    listurls=[]
+    for urls in rjson["videos"]:
+        if count<5:
+            count=count+1
+            line_bot_api.reply_message(userId = event['source']['userId'], text=urls["url"])
+            time.sleep(1)
+
+            base_url = 'https://pornhub.com'
+            last_url = ''
+
+#RANDOM VIDEO
+def get(url, no_cache=False):
+    headers = {
+        'User-Agent': 'A Telegram bot inspired in cybits/cybot',
+    }
+    if no_cache:
+        headers['Cache-Control'] = 'private,max-age=0'
+    return requests.get(base_url + url, headers=headers)
+
+def get_random_title():
+    r = get('/random')
+    soup = BeautifulSoup(str(r.content, 'UTF-8', errors='replace'))
+    last_url = r.url
+    return soup.find('title').text.split(' - Pornhub.com')[0],last_url
+
+message="Good morning! ;) \n \n" + get_random_title()[1]
 
 if __name__ == '__main__':
     app.run(debug=True)
