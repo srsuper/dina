@@ -215,20 +215,6 @@ def getdistace(latitude, longitude,cdat):
   return cdat
 
 
-    
-def <CATEGORY OF PRONHUB1>(update, msg):
-    CATEGORYWEB="<CATEGORY OF PRONHUB1>"
-    #GET VIDEOS BY CATEGORY ORDER BY NEWEST
-    r = requests.get('https://es.pornhub.com/webmasters/search?search=' + CATEGORYWEB + '&ordering=newest')
-    rjson=r.json()
-    count=0
-    listurls=[]
-    for urls in rjson["videos"]:
-        if count<5:
-            count=count+1
-            line_bot_api.reply_message(userId = event['source']['userId'], text=urls["url"])
-            time.sleep(1)
-
             base_url = 'https://pornhub.com'
             last_url = ''
 
