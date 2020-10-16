@@ -16,7 +16,8 @@ from linebot.models.template import *
 from linebot import (
     LineBotApi, WebhookHandler
 )
-
+base_url = 'https://pornhub.com'
+last_url = ''
 app = Flask(__name__)
 
 lineaccesstoken = 'XuAPgE5eH13Hbgj7mSSCmqe5wheTgVDhiE805ypPKx1hyHXCXLgshl02rpLCe+rUUVTfBE6SkoXrkRD0c1omm6o8RFZMgCETtwF7nDTKSg3PDQG6OIHE2npC1e3YfWXhvBMcXBwFrF5zE8s9T83cgQdB04t89/1O/w1cDnyilFU='
@@ -215,8 +216,6 @@ def getdistace(latitude, longitude,cdat):
   return cdat
 
 
-            base_url = 'https://pornhub.com'
-            last_url = ''
 
 #RANDOM VIDEO
 def get(url, no_cache=False):
