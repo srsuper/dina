@@ -8,8 +8,7 @@ import numpy as np
 import pandas as pd
 import requests
 import geopy.distance as ps
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,TemplateSendMessage,ImageSendMessage, StickerSendMessage, AudioSendMessage, FlexSendMessage
 )
@@ -19,10 +18,7 @@ from linebot import (
 )
 
 app = Flask(__name__)
-scope = ['https://spreadsheets.google.com/feeds']
-creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret_122468572696-k3jmcr3m0c9vs7vrorie4l611b3s3mjv.apps.googleusercontent.com.json', scope)
-client = gspread.authorize(creds)
-sheet = client.open("bot_py").sheet1
+
 lineaccesstoken = 'XuAPgE5eH13Hbgj7mSSCmqe5wheTgVDhiE805ypPKx1hyHXCXLgshl02rpLCe+rUUVTfBE6SkoXrkRD0c1omm6o8RFZMgCETtwF7nDTKSg3PDQG6OIHE2npC1e3YfWXhvBMcXBwFrF5zE8s9T83cgQdB04t89/1O/w1cDnyilFU='
 line_bot_api = LineBotApi(lineaccesstoken)
 
