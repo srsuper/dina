@@ -20,8 +20,8 @@ base_url = 'https://pornhub.com'
 last_url = ''
 app = Flask(__name__)
 
-lineaccesstoken = 'XuAPgE5eH13Hbgj7mSSCmqe5wheTgVDhiE805ypPKx1hyHXCXLgshl02rpLCe+rUUVTfBE6SkoXrkRD0c1omm6o8RFZMgCETtwF7nDTKSg3PDQG6OIHE2npC1e3YfWXhvBMcXBwFrF5zE8s9T83cgQdB04t89/1O/w1cDnyilFU='
-line_bot_api = LineBotApi(lineaccesstoken)
+lineaccesstoken = 'LUH+DRyWto0UkWMKe4BKNBbIOSsiLVc3OGqvH4nYZ6zBQT/v3bLeVjn2JjN9Wn9Bv61ZMucpt0crSxjo+81eP5b6ubU2IrvcKckydgkg7jpgz6KkjL6Ba7a8q4zgms5mP+FRqoEuwamTS9cIJC5YjwdB04t89/1O/w1cDnyilFU='
+line_bot_api = 'edad8dfc23018d512e21c6e6210735f8'
 
 casedata = pd.read_excel('casedata.xlsx')
 
