@@ -14,14 +14,14 @@ from linebot.models import (
 )
 from linebot.models.template import *
 from linebot import (
-    LineBotApi, WebhookHandler
+    LineBotApi, WebhookHanler
 )
 base_url = 'https://pornhub.com'
 last_url = ''
 app = Flask(__name__)
 
-lineaccesstoken = 'LUH+DRyWto0UkWMKe4BKNBbIOSsiLVc3OGqvH4nYZ6zBQT/v3bLeVjn2JjN9Wn9Bv61ZMucpt0crSxjo+81eP5b6ubU2IrvcKckydgkg7jpgz6KkjL6Ba7a8q4zgms5mP+FRqoEuwamTS9cIJC5YjwdB04t89/1O/w1cDnyilFU='
-line_bot_api = 'edad8dfc23018d512e21c6e6210735f8'
+lineaccesstoken = LineBotApi('LUH+DRyWto0UkWMKe4BKNBbIOSsiLVc3OGqvH4nYZ6zBQT/v3bLeVjn2JjN9Wn9Bv61ZMucpt0crSxjo+81eP5b6ubU2IrvcKckydgkg7jpgz6KkjL6Ba7a8q4zgms5mP+FRqoEuwamTS9cIJC5YjwdB04t89/1O/w1cDnyilFU=')
+line_bot_api = WebhookHandler('edad8dfc23018d512e21c6e6210735f8')
 
 casedata = pd.read_excel('casedata.xlsx')
 
