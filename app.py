@@ -20,8 +20,8 @@ from linebot import (
 
 app = Flask(__name__)
 
-LineBotApi ='LUH+DRyWto0UkWMKe4BKNBbIOSsiLVc3OGqvH4nYZ6zBQT/v3bLeVjn2JjN9Wn9Bv61ZMucpt0crSxjo+81eP5b6ubU2IrvcKckydgkg7jpgz6KkjL6Ba7a8q4zgms5mP+FRqoEuwamTS9cIJC5YjwdB04t89/1O/w1cDnyilFU='
-WebhookHandler='edad8dfc23018d512e21c6e6210735f8'
+LineBotApi ='yBZc3B7yxD2Afe8H/npJcqL96QrxQUtzd1ua/CzfKxP6HMTJpQultDheBaa4tuy611xlDUqtS4inRcjnbbiFxECSt/g4k7t4KRl2ObgKzPTgK8VM9ryMmFLjtLBrTInmNK3AP1DzpT5kTAYoBdK0yAFIS9xybk1bpjJUhI9NTk0='
+WebhookHandler='15a21aec7a0c6f363b3c264c1c97da4f'
 
 casedata = pd.read_excel('casedata.xlsx')
 
